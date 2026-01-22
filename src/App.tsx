@@ -10,6 +10,7 @@ import { CorreosEmpresariales } from "./pages/servicios/CorreosEmpresariales";
 import { Contactanos } from "./pages/Contactanos";
 import { Footer } from "./componentes/Footer";
 import { AgenteIa } from "./pages/servicios/AgenteIa";
+import { Servidores } from "./pages/servicios/Servidores";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           />
           <Route path="/Contactanos" element={<Contactanos />} />
           <Route path="/servicios/AgenteIa" element={<AgenteIa />}></Route>
+          <Route path="/servicios/Servidores" element={<Servidores />}></Route>
 
           <Route path="*" element={<h1>404 - No encontrado</h1>} />
         </Routes>

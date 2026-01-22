@@ -1,0 +1,184 @@
+.servidores-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+}
+
+.servidores-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.badge-servidores {
+  background-color: #f0f0ff;
+  color: #4c2bd6;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.servidores-header h1 {
+  font-size: 2.8rem;
+  margin: 20px 0;
+  font-weight: 800;
+}
+
+.highlight-purple {
+  color: #4c2bd6;
+}
+
+.servidores-intro {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.quote-banner {
+  background: #f8f9ff;
+  border-left: 5px solid #4c2bd6;
+  padding: 20px;
+  margin: 25px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.n5go-brand {
+  color: #7456f1;
+  font-weight: 800;
+}
+
+/* --- GRID DE BENEFICIOS --- */
+.servidores-grid {
+  display: flex;
+  gap: 25px;
+  margin: 50px 0;
+  justify-content: center;
+}
+
+.servidor-card {
+  flex: 1;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  border: 2px solid #f0f0f5;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.servidor-card:hover {
+  transform: translateY(-10px);
+  border-color: #4c2bd6;
+  box-shadow: 0 15px 40px rgba(76, 43, 214, 0.12);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.servidor-card h3 {
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* --- CTA FOOTER --- */
+.servidores-footer-cta {
+  background: linear-gradient(135deg, #4c2bd6 0%, #7456f1 100%);
+  border-radius: 24px;
+  padding: 50px;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-servidores {
+  background: #fff;
+  color: #4c2bd6;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: transform 0.2s;
+}
+
+.btn-servidores:hover {
+  transform: scale(1.05);
+  background: #f0f0f0;
+}
+
+.servidores-intro p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.extra-info {
+  background-color: #f9f9fb;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px dashed #4c2bd6; /* Un detalle visual para diferenciar la sección de IPs */
+  margin-top: 30px;
+}
+
+.n5go-brand {
+  color: #4c2bd6;
+  font-weight: 700;
+}
+
+.highlight-purple {
+  color: #4c2bd6;
+}
+
+.quote-banner {
+  background: #f0f0ff;
+  border-left: 5px solid #4c2bd6;
+  padding: 25px;
+  margin: 30px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  border-radius: 0 15px 15px 0;
+}
+
+.img-container-centrado {
+  text-align: center;
+  padding: 20px 0;
+}
+.img-servidores-directa {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 992px) {
+  .servidores-grid {
+    flex-wrap: wrap;
+  }
+  .servidor-card {
+    flex: none;
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .servidores-header h1 {
+    font-size: 2.2rem;
+  }
+  .servidor-card {
+    width: 100%;
+  }
+}

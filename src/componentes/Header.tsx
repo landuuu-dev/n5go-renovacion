@@ -58,12 +58,16 @@ export const Header = () => {
               <Link to="/servicios/AgenteIa" onClick={() => setIsOpen(false)}>
                 Agente IA
               </Link>
+
+              <Link to="/servicios/Servidores" onClick={() => setIsOpen(false)}>
+                Servidores fisicos
+              </Link>
             </div>
           )}
         </div>
 
         <div className="nav-links">
-          <Link to="/Contactanos" className="nav-item">
+          <Link to="/Contactanos" className="nav-item-contactanos">
             Contactanos
           </Link>
         </div>

@@ -47,6 +47,8 @@ export const Contactanos: React.FC = () => {
     "Correos Corporativos",
     "Soluciones Informáticas",
     "Seguridad Informática",
+    "Agente de IA",
+    "Servidores fisicos",
   ];
 
   return (

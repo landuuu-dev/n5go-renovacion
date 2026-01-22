@@ -111,3 +111,19 @@
     height: 45px;
   }
 }
+
+.nav-item-contactanos {
+  text-decoration: none;
+  background-color: #abf5c5;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+  border: 1px solid #23ba5d;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav-item-contactanos:hover {
+  background-color: #23ba5d;
+  color: #f8f5ff;
+}
