@@ -109,13 +109,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #ada5e8;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(116, 86, 241, 0.1);
   border-color: #7456f1;
+  background-color: #7456f1;
+  color: #fff;
+}
+
+.service-card:hover p {
+  color: #fafafb;
+}
+
+.service-card:hover span {
+  color: #fafafb;
 }
 
 .service-icon {
