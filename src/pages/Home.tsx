@@ -102,7 +102,7 @@ export const Home = () => {
           </Link>
 
           {/* Card 5: IA */}
-          <Link to="/servicios/ia" className="service-card">
+          <Link to="/servicios/AgenteIa" className="service-card">
             <div className="service-icon">
               <img src={agenteIa} alt="Icono IA" />
             </div>

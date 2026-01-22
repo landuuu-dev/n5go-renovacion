@@ -54,6 +54,10 @@ export const Header = () => {
               >
                 Correos Empresariales
               </Link>
+
+              <Link to="/servicios/AgenteIa" onClick={() => setIsOpen(false)}>
+                Agente IA
+              </Link>
             </div>
           )}
         </div>

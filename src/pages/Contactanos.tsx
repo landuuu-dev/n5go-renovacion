@@ -3,22 +3,21 @@ import "./Contactanos.css";
 
 export const Contactanos: React.FC = () => {
   const [mensajeCopiado, setMensajeCopiado] = useState<string | null>(null);
+  // Estado para la opción seleccionada
+  const [servicioSeleccionado, setServicioSeleccionado] = useState<string>("");
 
   const mostrarAviso = (label: string) => {
     setMensajeCopiado(`${label} copiado`);
     setTimeout(() => setMensajeCopiado(null), 2000);
   };
 
-  // Esta función es la que garantiza el copiado
   const copyToClipboard = (text: string, label: string) => {
-    // Intento 1: API Moderna (Solo funciona en HTTPS/Localhost)
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard
         .writeText(text)
         .then(() => mostrarAviso(label))
         .catch(() => fallbackCopy(text, label));
     } else {
-      // Intento 2: Método manual (Funciona siempre)
       fallbackCopy(text, label);
     }
   };
@@ -26,31 +25,32 @@ export const Contactanos: React.FC = () => {
   const fallbackCopy = (text: string, label: string) => {
     const textArea = document.createElement("textarea");
     textArea.value = text;
-
-    // Aseguramos que el textarea no se vea pero esté en el DOM
     textArea.style.position = "fixed";
     textArea.style.left = "-9999px";
     textArea.style.top = "0";
     document.body.appendChild(textArea);
-
     textArea.focus();
     textArea.select();
-
     try {
       const successful = document.execCommand("copy");
-      if (successful) {
-        mostrarAviso(label);
-      }
+      if (successful) mostrarAviso(label);
     } catch (err) {
       console.error("Error fatal al copiar", err);
     }
-
     document.body.removeChild(textArea);
   };
 
+  const servicios = [
+    "Soporte Computacional",
+    "Data Center",
+    "Servidor Virtual Privado",
+    "Correos Corporativos",
+    "Soluciones Informáticas",
+    "Seguridad Informática",
+  ];
+
   return (
     <section className="soporte-container">
-      {/* Mensaje flotante que confirma el copiado */}
       {mensajeCopiado && <div className="toast-copiado">{mensajeCopiado}</div>}
 
       <div className="soporte-header">
@@ -103,12 +103,36 @@ export const Contactanos: React.FC = () => {
           </label>
           <input type="email" required />
         </div>
+
         <div className="form-group">
           <label>
             Mensaje <span className="required">*</span>
           </label>
           <textarea rows={4} required></textarea>
         </div>
+
+        {/* NUEVAS OPCIONES MÚLTIPLES */}
+        <div className="form-group">
+          <label>
+            Servicio de interés <span className="required">*</span>
+          </label>
+          <div className="radio-group">
+            {servicios.map((servicio) => (
+              <label key={servicio} className="radio-label">
+                <input
+                  type="radio"
+                  name="servicio"
+                  value={servicio}
+                  checked={servicioSeleccionado === servicio}
+                  onChange={(e) => setServicioSeleccionado(e.target.value)}
+                  required
+                />
+                {servicio}
+              </label>
+            ))}
+          </div>
+        </div>
+
         <button type="submit" className="btn-enviar">
           Enviar Mensaje
         </button>

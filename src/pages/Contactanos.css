@@ -4,6 +4,7 @@
   max-width: 1000px; /* Un poco más estrecho para que el formulario se vea mejor */
   margin: 0 auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 70%;
 }
 
 /* --- BLOQUE DE INFORMACIÓN SUPERIOR (CLICK PARA COPIAR) --- */
@@ -229,4 +230,41 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+/* --- RADIO BUTTONS (ACTUALIZADO A UNA COLUMNA) --- */
+.radio-group {
+  display: flex; /* Cambiamos de grid a flex para mejor control vertical */
+  flex-direction: column; /* Alineación vertical: una debajo de otra */
+  gap: 10px; /* Espacio entre cada opción */
+  margin-top: 10px;
+  background: #f9f9fb;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f5;
+}
+
+.radio-label {
+  font-weight: 500 !important;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 10px; /* Un poco más de padding para que sea fácil clickear */
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.radio-label:hover {
+  background: #f0f0ff; /* Efecto hover sutil al pasar el mouse */
+  color: #4c2bd6;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #4c2bd6; /* Color morado corporativo */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
 }
