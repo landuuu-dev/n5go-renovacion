@@ -1,0 +1,94 @@
+/* Contenedor principal del Nav */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%; /* Usamos porcentaje para que respire mejor en pantallas grandes */
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 80px; /* Un poquito más de altura para que no se vea apretado */
+
+  /* ESTO LO HACE FIJO */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box; /* Importante para que el padding no desborde el ancho */
+  z-index: 1000;
+}
+
+/* Logo */
+.logo-link img {
+  height: 55px; /* Un poquito más grande */
+  width: auto;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.logo-link img:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor de links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* Aumentamos la separación entre links */
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #854fff;
+}
+
+/* Dropdown */
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  padding: 15px 0; /* Más área de click */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  min-width: 250px; /* Un poco más ancho para nombres largos */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+}
+
+.dropdown-content a {
+  padding: 14px 20px; /* Más espacio interno en cada servicio */
+  text-decoration: none;
+  color: #444;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f8f5ff;
+  color: #854fff;
+  padding-left: 25px; /* Efecto sutil de desplazamiento al pasar el mouse */
+}

@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  padding-top: 80px; /* DEBE SER LA MISMA ALTURA QUE TU NAVBAR */
+}
+main,
+.home-container {
+  flex: 1;
+}

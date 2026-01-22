@@ -1,0 +1,180 @@
+/* --- SECCIÓN DE CONTACTO GENERAL --- */
+.soporte-container {
+  padding: 50px 40px;
+  max-width: 1000px; /* Un poco más estrecho para que el formulario se vea mejor */
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- BLOQUE DE INFORMACIÓN SUPERIOR (CLICK PARA COPIAR) --- */
+.contacto-info-superior {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f0ff;
+  padding: 25px;
+  border-radius: 12px;
+  border-top: 5px solid #4c2bd6;
+  margin: 20px auto 40px auto;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-item-superior {
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.info-item-superior:hover {
+  background-color: #e8e8ff;
+  transform: translateY(-2px);
+}
+
+.info-item-superior:active {
+  transform: scale(0.95);
+}
+
+.info-item-superior strong {
+  color: #4c2bd6;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.copy-text {
+  color: #444;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* --- FORMULARIO --- */
+.contacto-form-full {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(76, 43, 214, 0.08);
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contacto-form-full input[type="text"],
+.contacto-form-full input[type="email"],
+.contacto-form-full textarea {
+  width: 100%;
+  box-sizing: border-box; /* Evita que el input se salga del borde */
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contacto-form-full input:focus,
+.contacto-form-full textarea:focus {
+  outline: none;
+  border-color: #4c2bd6;
+}
+
+/* --- RADIO BUTTONS (OPCIONES MÚLTIPLES) --- */
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  background: #f9f9fb;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.radio-group label {
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #4c2bd6;
+  width: 18px;
+  height: 18px;
+}
+
+/* --- BOTÓN ENVIAR --- */
+.btn-enviar {
+  background-color: #4c2bd6;
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #3a1fa3;
+  transform: translateY(-2px);
+}
+
+/* --- TOAST DE COPIADO --- */
+.toast-copiado {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4c2bd6;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out;
+  font-weight: 600;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+  .contacto-info-superior {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .soporte-container {
+    padding: 20px;
+  }
+}

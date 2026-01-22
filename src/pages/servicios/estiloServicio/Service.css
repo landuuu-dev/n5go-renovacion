@@ -1,0 +1,226 @@
+/* SoporteTecnico.css */
+
+.soporte-container {
+  padding: 50px 40px 40px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.soporte-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.soporte-header .highlight {
+  color: #4c2bd6;
+}
+
+.soporte-quote {
+  border-left: 4px solid #4c2bd6;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  background-color: #f0f0ff;
+  padding: 15px 20px;
+}
+
+.soporte-description {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.n5go-brand {
+  color: #7456f1;
+  font-weight: bold;
+}
+
+/* Grid de Servicios */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.servicio-card {
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+}
+
+.servicio-card h3 {
+  color: #4c2bd6;
+  margin-top: 0;
+}
+
+/* Contenedor de las 3 tarjetas */
+
+.precio-monto {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4c2bd6;
+}
+
+.precio-sub {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Usamos tu estilo de lista con el check morado */
+.check-list-precios {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+  flex-grow: 1; /* Hace que la lista ocupe el espacio disponible */
+}
+
+.check-list-precios li {
+  position: relative;
+  padding: 8px 0 8px 30px;
+  font-size: 0.95rem;
+  color: #555;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.check-list-precios li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4c2bd6;
+  font-weight: bold;
+}
+
+/* El contenedor flex ya lo tienes, solo verifica que tenga justify-content: center */
+.precios-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+  margin: 50px auto;
+}
+
+/* Nueva clase específica para la tarjeta de VPS única */
+.precio-card-vps {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(76, 43, 214, 0.15); /* Sombra con toque morado */
+  text-align: center;
+  background-color: #fff;
+
+  /* BORDE DESTACADO MORADO */
+  border: 2px solid #4c2bd6;
+
+  transition: transform 0.3s ease;
+
+  /* CONTROL DE ANCHO: para que no se estire */
+  width: 100%;
+  max-width: 380px;
+}
+
+.precio-card-vps:hover {
+  transform: translateY(-10px);
+}
+
+/* Re-utilizamos los estilos internos para que se vean igual */
+.precio-card-vps h3 {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+  margin-top: 0;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+/* El contenedor del valor (UF/Monto) */
+.precio-valor-container {
+  margin: 25px 0;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centra el contenido interno */
+}
+
+/* Contenedor de la imagen */
+.imagen-centrada-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  padding: 40px 0; /* Espacio arriba y abajo de la imagen */
+  width: 100%;
+}
+
+/* Estilos de la imagen para que sea responsiva */
+.imagen-servicios {
+  max-width: 600px; /* Ancho máximo para que no se vea gigante */
+  width: 100%; /* Se adapta a pantallas pequeñas */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 15px; /* Bordes redondeados opcionales para que combine con tus cards */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+}
+
+/* Ajuste opcional para móviles */
+@media (max-width: 768px) {
+  .imagen-servicios {
+    max-width: 90%; /* Un poco más pequeña en celulares */
+  }
+}
+
+/* Todas las tarjetas ahora tendrán el estilo de la de VPS */
+.precio-card {
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+
+  /* ESTILO VPS: Borde morado y sombra con tinte */
+  border: 2px solid #4c2bd6;
+  box-shadow: 0 10px 40px rgba(76, 43, 214, 0.12);
+
+  /* Tamaño consistente */
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.precio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 45px rgba(76, 43, 214, 0.2);
+}
+
+.precio-card h3 {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+  margin-top: 0;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+/* El contenedor del valor (Monto y UF) */
+.precio-valor-container {
+  margin: 25px 0;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

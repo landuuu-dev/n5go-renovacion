@@ -1,0 +1,162 @@
+/* ==========================================================================
+   FOOTER FULL WIDTH
+   ========================================================================== */
+.footer {
+  background-color: #092950;
+  color: #ffffff;
+  padding: 60px 0 30px; /* Padding lateral a 0 para que el fondo sea total */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Asegura que el footer rompa cualquier contenedor limitado */
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* El contenedor interno mantiene el contenido centrado y alineado con el resto del sitio */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Aquí devolvemos el margen interno para el contenido */
+  width: 100%;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.footer-info {
+  flex: 1;
+}
+
+.footer-tagline {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-description {
+  font-size: 1rem;
+  color: #cccccc;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Iconos de Redes Sociales */
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5rem;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.2);
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+.instagram {
+  background-color: #c13584;
+}
+.youtube {
+  background-color: #c4302b;
+}
+.linkedin {
+  background-color: #0e76a8;
+}
+
+/* Separador */
+.footer-divider {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 0 0 30px 0;
+  width: 100%;
+}
+
+/* Fila Inferior */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  color: #888;
+  padding-bottom: 70px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.contact-details {
+  text-align: right;
+}
+
+.contact-details a {
+  color: #7456f1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .footer {
+    /* En móviles quitamos el margen negativo si el body no tiene overflow */
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-description {
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .contact-details {
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}

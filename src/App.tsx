@@ -1,0 +1,43 @@
+// src/App.jsx
+import { Routes, Route } from "react-router-dom";
+import { Header } from "./componentes/Header";
+import { Home } from "./pages/Home";
+import SoporteMantenimiento from "./pages/servicios/SoporteMantenimiento";
+import { DataCenter } from "./pages/servicios/DataCenter";
+import { Vps } from "./pages/servicios/Vps";
+import { DesarrolloSoftware } from "./pages/servicios/DesarrolloSoftware";
+import { CorreosEmpresariales } from "./pages/servicios/CorreosEmpresariales";
+import { Contactanos } from "./pages/Contactanos";
+import { Footer } from "./componentes/Footer";
+function App() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/servicios/SoporteMantenimiento"
+            element={<SoporteMantenimiento />}
+          />
+          <Route path="/servicios/DataCenter" element={<DataCenter />} />
+          <Route path="/servicios/Vps" element={<Vps />} />
+          <Route
+            path="/servicios/DesarrolloSoftware"
+            element={<DesarrolloSoftware />}
+          />
+          <Route
+            path="/servicios/CorreosEmpresariales"
+            element={<CorreosEmpresariales />}
+          />
+          <Route path="/Contactanos" element={<Contactanos />} />
+
+          <Route path="*" element={<h1>404 - No encontrado</h1>} />
+        </Routes>
+      </main>
+      <Footer></Footer>
+    </>
+  );
+}
+
+export default App;
