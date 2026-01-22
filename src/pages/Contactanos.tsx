@@ -54,9 +54,7 @@ export const Contactanos: React.FC = () => {
       {mensajeCopiado && <div className="toast-copiado">{mensajeCopiado}</div>}
 
       <div className="soporte-header">
-        <h2>
-          Contácte<span className="highlight">nos</span>
-        </h2>
+        <h2>Contáctenos</h2>
         <p className="soporte-description">
           Haga clic sobre los datos para copiarlos automáticamente.
         </p>
