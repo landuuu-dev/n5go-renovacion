@@ -1,9 +1,18 @@
+/* ==========================================================================
+   CONFIGURACIÓN GLOBAL DE LA HOME
+   ========================================================================== */
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* ==========================================================================
+   SECCIÓN HERO
+   ========================================================================== */
 .hero {
   display: flex;
   align-items: center;
@@ -33,7 +42,7 @@
 }
 
 .hero-quote {
-  border-left: 4px solid #7456f1; /* El morado de tu marca */
+  border-left: 4px solid #7456f1;
   padding-left: 20px;
   margin-bottom: 2rem;
 }
@@ -49,23 +58,6 @@
   font-weight: 700;
 }
 
-.hero-cta {
-  background-color: #7456f1;
-  color: white;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.hero-cta:hover {
-  background-color: #5d42d1;
-}
-
-/* Estilos del Video */
 .hero-video {
   flex: 1;
   display: flex;
@@ -79,32 +71,23 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsivo para celulares */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-quote {
-    border-left: none;
-    border-top: 3px solid #7456f1;
-    padding-left: 0;
-    padding-top: 20px;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-}
-
-/* Espaciado de la sección de servicios */
+/* ==========================================================================
+   SECCIÓN DE SERVICIOS
+   ========================================================================== */
 .services-section {
   padding: 80px 0;
   background-color: #ffffff;
 }
 
-/* Rejilla de servicios */
+.title-service {
+  color: #000;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -112,7 +95,6 @@
   width: 100%;
 }
 
-/* Estilo de cada tarjeta */
 .service-card {
   background: #fff;
   padding: 40px 30px;
@@ -137,8 +119,20 @@
 }
 
 .service-icon {
-  font-size: 40px;
+  background: #f8f5ff;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   margin-bottom: 20px;
+}
+
+.service-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .service-card h3 {
@@ -158,35 +152,9 @@
   font-weight: bold;
 }
 
-.service-icon img {
-  width: 50px; /* Ajusta el tamaño según tu imagen */
-  height: 50px;
-  object-fit: contain;
-  display: block;
-}
-
-.service-icon {
-  background: #f8f5ff; /* Mantiene el fondo morado clarito */
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.title-service {
-  color: #000;
-  font-size: 2.8rem;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* SECCION DE POR QUE NOSOTROS */
-
+/* ==========================================================================
+   SECCIÓN ¿POR QUÉ ELEGIRNOS?
+   ========================================================================== */
 .why-choose-us {
   padding: 100px 0;
   background-color: #fcfcfc;
@@ -196,7 +164,7 @@
   display: flex;
   align-items: center;
   gap: 60px;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -209,7 +177,7 @@
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-  height: 500px; /* Ajusta según prefieras */
+  display: block;
 }
 
 .why-content {
@@ -229,28 +197,25 @@
   gap: 30px;
 }
 
-/* --- Sección ¿Por qué elegirnos? Actualizada --- */
-
 .benefit-item {
   display: flex;
   gap: 20px;
   align-items: center;
-  /* Agregamos un borde sutil y fondo similar a las cards de servicios */
   background: #fff;
   padding: 15px;
   border-radius: 12px;
   border: 1px solid #bcb7b7;
+  transition: all 0.3s ease;
 }
 
 .benefit-item:hover {
   border-color: #7456f1;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transform: translateX(5px); /* Pequeño desplazamiento a la derecha */
+  transform: translateX(5px);
 }
 
 .benefit-icon-small {
   background: #7456f1;
-  /* Reducimos el tamaño del contenedor del círculo */
   min-width: 45px;
   width: 45px;
   height: 45px;
@@ -258,9 +223,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  /* Aumentamos el padding para que el icono blanco se vea más pequeño dentro del círculo */
   padding: 12px;
-  flex-shrink: 0; /* Evita que el círculo se aplaste si el texto es largo */
+  flex-shrink: 0;
 }
 
 .benefit-icon-small img {
@@ -271,7 +235,7 @@
 }
 
 .benefit-text h3 {
-  font-size: 1.1rem; /* Un poco más pequeño para armonizar */
+  font-size: 1.1rem;
   color: #333;
   margin-bottom: 2px;
   font-weight: 600;
@@ -281,24 +245,6 @@
   color: #777;
   font-size: 0.9rem;
   line-height: 1.3;
-  margin: 0;
-}
-
-/* Responsivo para móviles */
-@media (max-width: 900px) {
-  .why-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .why-image img {
-    height: auto;
-  }
-
-  .benefit-item {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 /* ==========================================================================
@@ -306,26 +252,22 @@
    ========================================================================== */
 .cta-section {
   padding: 80px 20px;
-  background-color: transparent; /* Quitamos cualquier color de fondo */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cta-container {
-  max-width: 1200px; /* Un poco más ancho para que luzca la imagen */
+  max-width: 1200px;
   margin: 0 auto;
   border-radius: 10px;
   padding: 100px 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
-
-  /* Configuración limpia de la imagen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /* Sombra para despegar el contenedor del fondo blanco del sitio */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -341,22 +283,74 @@
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 40px;
   max-width: 850px;
-  /* IMPORTANTE: Sombra negra para que el texto resalte sobre la imagen */
   text-shadow:
     2px 2px 15px rgba(0, 0, 0, 0.8),
     0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+/* ==========================================================================
+   RESPONSIVO (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+  .why-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .benefit-item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Móviles */
 @media (max-width: 768px) {
-  .cta-title {
-    font-size: 1.8rem;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+  .home-container {
+    padding: 20px 15px 0px 15px;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-quote {
+    border-left: none;
+    border-top: 3px solid #7456f1;
+    padding: 20px 0 0 0;
+  }
+
+  /* CTA sin bordes blancos */
+  .cta-section {
+    margin-left: -15px; /* Compensa el padding de home-container */
+    padding: 20px 0 0px 0 !important;
+    width: 100vw;
+    margin-left: -15px;
+    margin-bottom: -20px;
   }
   .cta-container {
-    padding: 60px 20px;
-    border-radius: 0; /* En móvil a veces queda mejor sin bordes redondeados */
+    padding: 80px 20px;
+    border-radius: 0;
     width: 100%;
+    min-height: 400px; /* Aumentado un poco para que luzca más en vertical */
+    background-position: center center;
+  }
+  .cta-title {
+    font-size: 1.5rem !important; /* Tamaño ideal para móviles */
+    line-height: 1.4; /* Mejora lectura en varias líneas */
+    max-width: 95%; /* Evita que las letras toquen los bordes de la imagen */
+    margin: 0 auto;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); /* Resalte extra */
+    text-align: center;
+    padding-right: 20px;
   }
 }

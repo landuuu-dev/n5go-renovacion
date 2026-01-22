@@ -1,28 +1,34 @@
 /* ==========================================================================
-   FOOTER FULL WIDTH
+   FOOTER REFORMADO
    ========================================================================== */
 .footer {
   background-color: #092950;
   color: #ffffff;
-  padding: 60px 0 30px; /* Padding lateral a 0 para que el fondo sea total */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-  /* Asegura que el footer rompa cualquier contenedor limitado */
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
+  margin: 0;
+  display: block;
 }
 
-/* El contenedor interno mantiene el contenido centrado y alineado con el resto del sitio */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* Aquí devolvemos el margen interno para el contenido */
+  padding: 0 20px;
   width: 100%;
 }
+
+/* Fila Inferior - Aseguramos que el color llegue al final */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #888;
+  padding: 30px 70px 40px; /* Padding interno para que el contenido respire */
+  margin-top: 20px;
+}
+
+/* ... el resto de estilos*/
 
 .footer-main {
   display: flex;
@@ -139,6 +145,7 @@
   .footer-main {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .footer-description {

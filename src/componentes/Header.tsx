@@ -15,7 +15,7 @@ export const Header = () => {
 
       {/* Lado derecho: Links */}
       <div className="nav-links">
-        <Link to="/" className="nav-item">
+        <Link to="/" className="nav-item hide-mobile">
           Inicio
         </Link>
 

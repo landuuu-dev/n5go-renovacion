@@ -92,3 +92,22 @@
   color: #854fff;
   padding-left: 25px; /* Efecto sutil de desplazamiento al pasar el mouse */
 }
+
+/* --- RESPONSIVO MOBILE --- */
+
+@media (max-width: 768px) {
+  /* Oculta el item de Inicio */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Ajustamos el espacio entre los links restantes para que no se vea vacío */
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  /* Opcional: Si el logo queda muy grande en móvil */
+  .logo-link img {
+    height: 45px;
+  }
+}

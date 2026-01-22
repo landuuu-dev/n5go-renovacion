@@ -66,7 +66,7 @@ export const DataCenter: React.FC = () => {
 
       <div className="precios-flex">
         {/* Tarjeta hosting start */}
-        <div className="precio-card">
+        <div className="precio-card-vps">
           <h3>Hosting Start</h3>
           <div className="precio-valor-container">
             <span className="precio-sub">Valor</span>
@@ -86,7 +86,10 @@ export const DataCenter: React.FC = () => {
         </div>
 
         {/* Tarjeta hosting full */}
-        <div className="precio-card" style={{ border: "2px solid #4c2bd6" }}>
+        <div
+          className="precio-card-vps"
+          style={{ border: "2px solid #4c2bd6" }}
+        >
           {" "}
           {/* Destacada */}
           <h3>Hosting Full</h3>
@@ -108,7 +111,7 @@ export const DataCenter: React.FC = () => {
         </div>
 
         {/* Tarjeta housing */}
-        <div className="precio-card">
+        <div className="precio-card-vps">
           <h3>Housing</h3>
           <div className="precio-valor-container">
             <span className="precio-sub">Valor</span>

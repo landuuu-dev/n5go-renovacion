@@ -178,3 +178,55 @@
     padding: 20px;
   }
 }
+
+/* Contenedor principal de las tarjetas */
+.precios-flex {
+  display: grid;
+  /* Crea 3 columnas iguales */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 10px;
+  align-items: stretch;
+}
+
+.precio-card-vps {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(76, 43, 214, 0.15);
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #4c2bd6;
+  transition: transform 0.3s ease;
+
+  /* Quitamos el ancho fijo para que el grid mande */
+  width: auto;
+  max-width: none;
+}
+
+/* Manejo de pantallas pequeñas (Móvil y Tablet) */
+@media (max-width: 1024px) {
+  .precios-flex {
+    /* En tablets, si no caben las 3, que pasen a 2 o 1 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .precios-flex {
+    grid-template-columns: 1fr; /* En celular una sobre otra */
+    padding: 20px;
+  }
+}
+
+/* IMPORTANTE: Asegúrate de que las listas tengan flex-grow para empujar 
+   el contenido y que todas las tarjetas terminen a la misma altura */
+.check-list-precios {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
