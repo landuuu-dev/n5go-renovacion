@@ -6,8 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>n5go-page</title>
   </head>
+
   <body>
     <div id="root"></div>
+    <div id="n8n-chat"></div>
+
     <script type="module" src="/src/main.tsx"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+      createChat({
+        webhookUrl:
+          "https://n8n-latest-883i.onrender.com/webhook/a7e93326-2ee9-4a0d-9195-1d1f665692cd/chat",
+        webhookConfig: {
+          method: "POST",
+          headers: {},
+        },
+        target: "#n8n-chat",
+        mode: "window",
+        chatInputKey: "chatInput",
+        chatSessionKey: "sessionId",
+        loadPreviousSession: true,
+        metadata: {},
+        showWelcomeScreen: false,
+        defaultLanguage: "en",
+        initialMessages: ["Hola 👋", "¿Como puedo ayudarte hoy?"],
+        i18n: {
+          en: {
+            title: "Hola 👋",
+            subtitle: "Hablemos estamos disponibles 24/7",
+            footer: "",
+            getStarted: "New Conversation",
+            inputPlaceholder: "Pregunta lo que quieras",
+          },
+        },
+        enableStreaming: false,
+      });
+    </script>
   </body>
 </html>
