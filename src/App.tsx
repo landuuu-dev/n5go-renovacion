@@ -11,6 +11,7 @@ import { Contactanos } from "./pages/Contactanos";
 import { Footer } from "./componentes/Footer";
 import { AgenteIa } from "./pages/servicios/AgenteIa";
 import { Servidores } from "./pages/servicios/Servidores";
+import N8nChat from "./componentes/N8nChat";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path="*" element={<h1>404 - No encontrado</h1>} />
         </Routes>
       </main>
+      <N8nChat></N8nChat>
       <Footer></Footer>
     </>
   );

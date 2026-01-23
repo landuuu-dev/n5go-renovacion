@@ -20,3 +20,23 @@ body {
 main {
   flex: 1; /* Esto empuja el footer hacia abajo siempre */
 }
+
+/* Contenedor del widget */
+#chat-widget,
+.chat-widget,
+iframe[src*="nocodeveloper"] {
+  width: 320px !important;
+  height: 420px !important;
+  max-height: 70vh !important;
+  border-radius: 12px !important;
+}
+
+/* En móvil */
+@media (max-width: 768px) {
+  #chat-widget,
+  .chat-widget,
+  iframe[src*="nocodeveloper"] {
+    width: 90vw !important;
+    height: 60vh !important;
+  }
+}
