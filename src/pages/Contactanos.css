@@ -60,7 +60,7 @@
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(76, 43, 214, 0.08);
-  border: 1px solid #eee;
+  border: 1px solid #cecef6;
   text-align: left;
 }
 
@@ -81,7 +81,7 @@
   width: 100%;
   box-sizing: border-box; /* Evita que el input se salga del borde */
   padding: 12px 15px;
-  border: 2px solid #eee;
+  border: 2px solid #ddddfa;
   border-radius: 10px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
@@ -241,7 +241,7 @@
   background: #f9f9fb;
   padding: 20px;
   border-radius: 12px;
-  border: 1px solid #f0f0f5;
+  border: 1px solid #cecef6;
 }
 
 .radio-label {
@@ -257,7 +257,7 @@
 }
 
 .radio-label:hover {
-  background: #f0f0ff; /* Efecto hover sutil al pasar el mouse */
+  background: #e9e9f9; /* Efecto hover sutil al pasar el mouse */
   color: #4c2bd6;
 }
 
