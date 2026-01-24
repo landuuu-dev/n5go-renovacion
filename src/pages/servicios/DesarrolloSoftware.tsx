@@ -14,7 +14,7 @@ export const DesarrolloSoftware: React.FC = () => {
         </blockquote>
         <p className="soporte-description">
           ¿Necesitas una solución tecnológica única que impulse tu negocio? En
-          <span className="n5go-brand">N5 Go,</span> transformamos tus ideas en
+          <span className="n5go-brand"> N5 Go,</span> transformamos tus ideas en
           realidad digital. Nuestro servicio de{" "}
           <strong>desarrollo de software a la medida </strong>
           te ofrece programas, proyectos y soluciones informáticas creadas

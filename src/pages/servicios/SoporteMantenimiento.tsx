@@ -14,8 +14,8 @@ const SoporteMantenimiento: React.FC = () => {
           </p>
         </blockquote>
         <p className="soporte-description">
-          En <span className="n5go-brand">N5 Go</span>, En N5 Go ayudamos a que
-          tu empresa trabaje sin problemas tecnológicos, ofreciendo soporte
+          En <span className="n5go-brand">N5 Go</span>, ayudamos a que tu
+          empresa trabaje sin problemas tecnológicos, ofreciendo soporte
           computacional confiable y eficiente.
         </p>
       </div>

@@ -11,6 +11,7 @@ import compa from "../assets/compañerismo.svg";
 import configuracion from "../assets/configuracion-engranaje-solo.svg";
 import medalla from "../assets/medalla.svg";
 import backgroundCTA from "../assets/background-contactanos.png";
+import videoFondo from "../assets/data-center-nuevo.mp4";
 
 export const Home = () => {
   return (
@@ -36,13 +37,7 @@ export const Home = () => {
         </div>
 
         <div className="hero-video" style={{ width: "100%" }}>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            src="https://n5go.cl/wp-content/uploads/2025/12/data-center.mp4"
-          >
+          <video autoPlay loop muted playsInline src={videoFondo}>
             Tu navegador no soporta videos.
           </video>
           <div className="video-overlay"></div>
