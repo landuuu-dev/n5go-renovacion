@@ -11,6 +11,7 @@ import { Contactanos } from "./pages/Contactanos";
 import { Footer } from "./componentes/Footer";
 import { AgenteIa } from "./pages/servicios/AgenteIa";
 import { Servidores } from "./pages/servicios/Servidores";
+import { NotFound } from "./pages/NotFound";
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
           <Route path="/servicios/AgenteIa" element={<AgenteIa />}></Route>
           <Route path="/servicios/Servidores" element={<Servidores />}></Route>
 
-          <Route path="*" element={<h1>404 - No encontrado</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer></Footer>
