@@ -30,6 +30,9 @@ export const Home = () => {
               nosotros!
             </p>
           </div>
+          <Link to="/Contactanos" className="button-item-contactanos">
+            Contactanos
+          </Link>
         </div>
 
         <div className="hero-video">
