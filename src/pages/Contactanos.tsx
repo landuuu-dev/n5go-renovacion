@@ -52,7 +52,7 @@ export const Contactanos: React.FC = () => {
   ];
 
   return (
-    <section className="soporte-container">
+    <section className="soporte-container" style={{ width: "50%" }}>
       {mensajeCopiado && <div className="toast-copiado">{mensajeCopiado}</div>}
 
       <div className="soporte-header">
