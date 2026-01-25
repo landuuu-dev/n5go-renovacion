@@ -368,6 +368,12 @@
   }
 }
 
+@media (max-width: 1500px) {
+  .hero {
+    margin-left: 30px;
+  }
+}
+
 /* Móviles */
 @media (max-width: 768px) {
   .home-container {
@@ -378,19 +384,25 @@
   .hero {
     flex-direction: column;
     text-align: center;
+    margin-left: 50px;
   }
   .hero-subtitle {
     font-size: 2rem;
+    margin-right: 100px;
   }
   .hero-title {
     font-size: 2rem;
+    margin-right: 100px;
   }
   .hero-quote {
     border-left: none;
     border-top: 3px solid #7456f1;
     padding: 20px 0 0 0;
-    width: 90%;
-    margin-left: 25px;
+    width: 80%;
+    margin-left: -5px;
+  }
+  #button-item-contactanos {
+    margin-right: 100px;
   }
 
   /* CTA sin bordes blancos */

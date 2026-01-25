@@ -31,12 +31,16 @@ export const Home = () => {
               nosotros!
             </p>
           </div>
-          <Link to="/Contactanos" className="button-item-contactanos">
+          <Link
+            to="/Contactanos"
+            className="button-item-contactanos"
+            id="button-item-contactanos"
+          >
             Contactanos
           </Link>
         </div>
 
-        <div className="hero-video" style={{ width: "100%" }}>
+        <div className="hero-video">
           <video autoPlay loop muted playsInline src={videoFondo}>
             Tu navegador no soporta videos.
           </video>
