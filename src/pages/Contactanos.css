@@ -7,6 +7,10 @@
   max-width: 70%;
 }
 
+#soporte-container {
+  max-width: 50%;
+}
+
 /* --- BLOQUE DE INFORMACIÓN SUPERIOR (CLICK PARA COPIAR) --- */
 .contacto-info-superior {
   display: flex;
@@ -214,9 +218,16 @@
     /* En tablets, si no caben las 3, que pasen a 2 o 1 */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+
+  #soporte-container {
+    max-width: 80%;
+  }
 }
 
 @media (max-width: 768px) {
+  #soporte-container {
+    max-width: 90%;
+  }
   .precios-flex {
     grid-template-columns: 1fr; /* En celular una sobre otra */
     padding: 20px;
