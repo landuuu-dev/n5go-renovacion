@@ -363,6 +363,9 @@
     flex-direction: column;
     align-items: center;
   }
+  .hero {
+    margin-left: 25px;
+  }
 }
 
 /* Móviles */
@@ -386,6 +389,8 @@
     border-left: none;
     border-top: 3px solid #7456f1;
     padding: 20px 0 0 0;
+    width: 90%;
+    margin-left: 25px;
   }
 
   /* CTA sin bordes blancos */
