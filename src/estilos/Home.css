@@ -379,12 +379,30 @@
   .home-container {
     padding: 20px 15px 0px 15px;
   }
+  .brand-highlight {
+    color: #5b35f1;
+    font-weight: 700;
+  }
 
+  .video-overlay {
+    background: linear-gradient(
+      to top,
+      rgb(255, 254, 254) 30%,
+      rgba(255, 255, 255, 0.292) 50%
+    );
+  }
+  section.hero {
+    margin: 0;
+    margin-bottom: -150px;
+  }
   /* Hero */
   .hero {
     flex-direction: column;
     text-align: center;
-    margin-left: 50px;
+  }
+
+  .hero-content {
+    margin-left: 13%;
   }
   .hero-subtitle {
     font-size: 2rem;
@@ -395,8 +413,8 @@
     margin-right: 100px;
   }
   .hero-quote {
-    border-left: none;
-    border-top: 3px solid #7456f1;
+    border-left: none !important;
+    border-top: 3px solid #623fed;
     padding: 20px 0 0 0;
     width: 80%;
     margin-left: -5px;

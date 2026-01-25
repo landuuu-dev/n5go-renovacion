@@ -17,7 +17,7 @@ export const Home = () => {
   return (
     <>
       {/* SECCIÓN HERO (VIDEO) */}
-      <section className="hero" style={{ width: "100%" }}>
+      <section className="hero">
         <div className="hero-content">
           <h2 className="hero-subtitle">¿Problemas tecnológicos?</h2>
           <h1 className="hero-title">Somos tu aliado tecnológico confiable</h1>
